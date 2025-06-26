@@ -4,7 +4,9 @@
     "name": "Ruby on Rails",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "postCreateCommand": "curl -o- https://fnm.vercel.app/install | bash && export PATH=/home/vscode/.local/share/fnm:$PATH && eval \"$(fnm env)\" && fnm install 22 && curl https://cli-assets.heroku.com/install.sh | bash",
+    "postStartCommand": "bundle"
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
     // Use 'forwardPorts' to make a list of ports inside the container available locally.

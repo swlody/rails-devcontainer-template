@@ -5,5 +5,5 @@ Starter template for Rails tutorial in VSCode. Setup upto [this chapter](https:/
 Setup with:
 
 ```sh
-rails new . --skip
+rails new . --skip --database=postgresql
 ```

@@ -1,7 +1,8 @@
-FROM mcr.microsoft.com/devcontainers/ruby:1-3.4-bullseye
+FROM mcr.microsoft.com/devcontainers/ruby:3.1-bullseye
 
 # Install Rails
-RUN su vscode -c "gem install rails webdrivers"
+RUN su vscode -c "gem install rails -v 7.1"
+RUN su vscode -c "gem install webdrivers"
 RUN su vscode -c "/usr/local/rvm/bin/rvm fix-permissions"
 
 # Default value to allow debug server to serve content over GitHub Codespace's port forwarding service
